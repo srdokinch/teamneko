@@ -1,0 +1,148 @@
+$main-colour: rgb(254, 200, 101);
+$sub-colour: rgb(255,70,107);
+$accent-colour: rgb(208, 238, 235);
+
+.wrapper {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  font-family: 'Julius Sans One', sans-serif;
+}
+
+body {
+  margin-right: 1%;
+  margin-left: 1%;
+}
+
+.logo {
+  height: 100px;
+  margin-top: 30px;
+
+  img {
+    height: 65px;
+    width: auto;
+  }
+}
+
+
+
+
+.empty {
+  width: auto;
+  height: 50px;
+}
+
+.screenshots {
+  margin: 0 auto;
+  width: 350px;
+}
+
+.bxslider {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  width: auto;
+  justify-content: space-between;
+}
+
+.explain {
+  text-align: center;
+  width: 600px;
+}
+
+.content {
+  margin: 0 auto;
+  width: 50%;
+  height: auto;
+  text-align: center;
+}
+
+*,
+*::before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+nav a {
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+  outline: none;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  text-shadow: 0 0 1px rgba(255,255,255,0.3);
+  font-size: 0.7em;
+}
+
+nav a:focus,
+nav a:hover {
+  outline: none;
+}
+/* Effect 11: three circles */
+.cl-effect-11 a {
+  padding: 10px 0;
+  /*border-top: 2px solid #0972b4;*/
+  color: #0972b4;
+  text-shadow: none;
+}
+
+.cl-effect-11 {
+  vertical-align: middle;
+  height: 100px;
+  line-height: 100px;
+}
+
+.cl-effect-11 a::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  padding: 10px 0;
+  max-width: 0;
+  /*border-bottom: 2px solid #fff;*/
+  color: pink;
+  content: attr(data-hover);
+  -webkit-transition: max-width 0.5s;
+  -moz-transition: max-width 0.5s;
+  transition: max-width 0.5s;
+}
+
+.cl-effect-11 a:focus::before,
+.cl-effect-11 a:hover::before {
+  max-width: 100%;
+}
+
+#team {
+  width: 95%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.member {
+  background-color: pink;
+  width: 150px;
+  height: auto;
+  overflow: auto;
+
+  p {
+    text-align: center;
+  }
+
+  img {
+    width: 200px;
+    height: auto;
+  }
+}
