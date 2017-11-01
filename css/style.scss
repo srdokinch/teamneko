@@ -5,72 +5,37 @@ $accent-colour: rgb(208, 238, 235);
 
 
 
+/* ---------------------
+    - body
+    - header
+    - main
+    - content
+    - team
+    - footer
+--------------------- */
 
 
+body {
+  margin-right: 1%;
+  margin-left: 1%;
+  margin-bottom: 0px;
+}
+
+/* =====================
+  header
+  ===================== */
+
+  /*  header > wrapper
+  ------------------------*/
 .wrapper {
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
   display: -o-flex;
   display: flex;
-  font-family: 'Julius Sans One', sans-serif;
-}
-
-body {
-  margin-right: 1%;
-  margin-left: 1%;
-  font-family: 'Raleway', sans-serif;
-}
-
-.logo {
-  height: 100px;
-  margin-top: 30px;
-
-  img {
-    height: 65px;
-    width: auto;
-  }
-}
-
-#visual {
-  width: auto;
-  height: 700px;
-  background-image: url("../images/nekodebanner1.jpg");
-  background-size: cover;
-}
-
-
-.empty {
-  width: auto;
-  height: 50px;
-}
-
-.screenshots {
-  margin: 0 auto;
-  width: 350px;
-}
-
-.bxslider {
-  margin: 0;
-  padding: 0;
-}
-
-.wrapper {
   width: auto;
   justify-content: space-between;
-}
-
-.attribute {
-  text-align: center;
-  width: 50%;
-  margin-right: 20px;
-}
-
-.content {
-  margin: 0 auto;
-  width: 50%;
-  height: auto;
-  text-align: center;
+  font-family: 'Julius Sans One', sans-serif;
 }
 
 *,
@@ -93,7 +58,7 @@ nav a {
   letter-spacing: 1px;
   font-weight: 400;
   text-shadow: 0 0 1px rgba(255,255,255,0.3);
-  font-size: 0.7em;
+  font-size: 1em;
 }
 
 nav a:focus,
@@ -104,7 +69,7 @@ nav a:hover {
 .cl-effect-11 a {
   padding: 10px 0;
   /*border-top: 2px solid #0972b4;*/
-  color: #0972b4;
+  color: #039eff;
   text-shadow: none;
 }
 
@@ -134,12 +99,91 @@ nav a:hover {
   max-width: 100%;
 }
 
-#team {
-  width: 95%;
-  height: auto;
-  margin: 0 auto;
+/*  header > logo
+------------------------*/
+.logo {
+  height: 100px;
+  margin-top: 30px;
+
+  img {
+    height: 65px;
+    width: auto;
+  }
 }
 
+/* =====================
+  Main visual
+  ===================== */
+#visual {
+  width: auto;
+  height: 750px;
+  background-image: url("../images/nekodebanner1.jpg");
+  background-size: cover;
+}
+
+.empty {
+  width: auto;
+  height: 50px;
+}
+
+/* =====================
+  contents
+  ===================== */
+.contents {
+  margin: 0 auto;
+  width: 50%;
+  height: auto;
+  text-align: center;
+  h1{
+    position: relative;
+    background: #dfefff;
+    box-shadow: 0px 0px 0px 5px #dfefff;
+    border: dashed 2px white;
+    padding: 0.2em 0.5em;
+    color: #454545;
+    font-family: 'Julius Sans One', sans-serif;
+  }
+  h1:after{
+    position: absolute;
+    content: '';
+    left: -7px;
+    top: -7px;
+    border-width: 0 0 15px 15px;
+    border-style: solid;
+    border-color: rgb(241,235,235) rgb(241,235,235) #a8d4ff; /*has to be the same colour with background*/
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* =====================
+  screenshots
+  ===================== */
+.screenshots {
+  margin: 0 auto;
+  width: 350px;
+}
+
+/* =====================
+  attribute
+  ===================== */
+.attribute {
+  text-align: center;
+  width: 50%;
+  margin-right: 20px;
+}
+
+/* =====================
+  team
+  ===================== */
+#team {
+  width: 0 auto;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+/*  team > member
+------------------------*/
 .member {
   width: 150px;
   height: auto;
@@ -147,16 +191,107 @@ nav a:hover {
   border: 1px solid;
   background-color: pink;
 
+  /*  member > p
+  ------------------------*/
   p {
     text-align: center;
   }
 
+  /*  member > name
+  ------------------------*/
+  .name{
+    width: auto;
+    background: linear-gradient(transparent 50%, yellow 50%);
+  }
+
+  /*  member > image
+  ------------------------*/
   img {
     width: 150px;
     height: auto;
   }
 }
 
-footer{
+/* =====================
+  contact
+  ===================== */
+#contact{
+  h3{
+    text-align: center;
+  }
+  
+  /*  contact > list
+  ------------------------*/
+  ul.share-buttons{
+  list-style: none;
+  padding: 0;
   text-align: center;
+  }
+
+ul.share-buttons li{
+  display: inline;
+  }
+
+ul.share-buttons .sr-only{
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  }
+
+ul.share-buttons img{
+  width: auto;
+  height: 60px;
+  }
+}
+
+/* =====================
+  footer
+  ===================== */
+footer{
+  background-color: pink;
+  text-align: center;
+  margin: 0px;
+  height: 40px;
+  p{
+    color: white;
+    margin: 0px;
+    padding: 0px;
+    vertical-align: middle;
+    line-height: 40px;
+  }
+}
+
+/* =====================
+  PC
+  ===================== */
+body{
+  background-color: rgb(241,235,235);
+}
+
+
+/* =====================
+  Tablet
+  ===================== */
+@media screen and ( max-width:960px )
+{
+	body
+	{
+		background-color: yellow;
+	}
+}
+
+/* =====================
+  smartphone
+  ===================== */
+@media screen and ( max-width:600px )
+{
+	body
+	{
+		background-color: red;
+	}
 }
